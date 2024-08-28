@@ -8,18 +8,24 @@
       <div class="p-8 bg-white border border-gray-200 rounded-md">
         <table cellpadding="0" cellspacing="0" style="border:none; margin:0; padding:0;" id="signature">
           <tr>
-            <td style="padding-left:15px;">
-              <div style="margin-bottom:20px">
-                {{ formValues.closingText }}
-              </div>
-              <div style="margin-bottom: 10px; font-family:Arial, sans-serif; font-size:15px; color:#000;">
-                <strong style="font-family:Arial, sans-serif;">
-                  <!-- First Name check -->
-                  <span style="font-size:18px; font-weight: bold;">{{ formValues.firstName?.length > 0 ? formValues.firstName : 'John' }}
-                  {{ formValues.lastName?.length > 0 ? formValues.lastName : 'Doe' }}</span>
-                </strong><br/>
-                <span style="color: #002f8d; font-family:Arial, sans-serif; font-size:16px;">{{ formValues.functionTitle?.length > 0 ? formValues.functionTitle : 'Eindbaas' }}</span>
-              </div>
+            <td style="padding-left:15px;" colspan="2">
+              <table cellpadding="0" cellspacing="0" style="border:none; margin-bottom:20px; padding:0;">
+                <tr>
+                  <td style="padding-bottom:20px">
+                    {{ formValues.closingText }}
+                  </td>
+                </tr>
+                <tr style="font-family:Arial, sans-serif; font-size:14px;">
+                  <td valign="middle" style="font-size:18px; font-weight: bold;">
+                    {{ formValues.firstName?.length > 0 ? formValues.firstName : 'John' }} {{ formValues.lastName?.length > 0 ? formValues.lastName : 'Doe' }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #002f8d; font-family:Arial, sans-serif; font-size:16px;">
+                    {{ formValues.functionTitle?.length > 0 ? formValues.functionTitle : 'Eindbaas' }}
+                  </td>
+                </tr>
+              </table>
               <table cellpadding="0" cellspacing="0" style="border:none; margin:0; padding:0;">
                 <tr style="font-family:Arial, sans-serif; font-size:14px;" *ngIf="formValues.mobilePhoneNUmber?.length > 0">
                   <td valign="middle" style="padding: 2px;">
@@ -43,7 +49,7 @@
                           <img src="https://www.befo.nl/assets/images/signature/linkedin.png" width="24" height="24" style="display:block; width:24px;height:24px;"/>
                         </td>
                         <td valign="middle" style="font-family:Arial, sans-serif; color:#222; font-size:14px; padding:2px;">
-                          <a *ngIf="formValues.linkedinLink?.length > 0" href="{{ formValues.linkedinLink }}">Let's connect</a>
+                          <a *ngIf="formValues.linkedinLink?.length > 0" style="color:#222; text-decoration:none;" href="{{ formValues.linkedinLink }}">Let's connect</a>
                         </td>
                       </tr>
                     </table>
@@ -59,7 +65,7 @@
                 </tr>
                 <tr>
                   <td valign="middle" style="font-family:Arial, sans-serif; font-size:14px; padding:2px;">
-                    <img src="https://www.befo.nl/assets/images/signature/companyphone.png" width="24" height="24" style="display:block; width:24px;height:24px;"/>
+                    <img src="https://www.befo.nl/assets/images/signature/companyphone.png" width="24" height="24" style="display:block; width:24px;height:24px; color:#222; text-decoration:none;"/>
                   </td>
                   <td valign="middle" style="font-family:Arial, sans-serif; color:#222; font-size:14px; padding:2px; text-decoration: none;">
                     +31 (0) 546 – 48 48 00
@@ -79,7 +85,7 @@
           <tr>
             <td style="vertical-align:top;">
               <a href="https://www.befo.nl" style="outline: none; text-decoration: none; color: #002f8d; ">
-                <img src="https://www.befo.nl/assets/images/signature/logo.png" alt="Logo" style="border:none; display:block; outline: none; width: 196px; height: 95px;" width="196" height="95"/>
+                <img src="https://www.befo.nl/assets/images/signature/logo.png" alt="Logo" style="border:none; display:block; outline: none; width: 196px; height: 95px; margin-top: 10px;" width="196" height="95"/>
               </a>
             </td>
           </tr>
